@@ -1,0 +1,233 @@
+CRITICAL - 2025-05-20 01:03:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(17): view('dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+ERROR - 2025-05-20 01:56:26 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in D:\laragon\www\PRAK701\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\PRAK701\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `bo...', 0)
+#1 D:\laragon\www\PRAK701\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bo...')
+#2 D:\laragon\www\PRAK701\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bo...')
+#3 D:\laragon\www\PRAK701\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bo...', Array, false)
+#4 D:\laragon\www\PRAK701\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\laragon\www\PRAK701\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 D:\laragon\www\PRAK701\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\laragon\www\PRAK701\app\Controllers\Book.php(74): CodeIgniter\Model->insert(Array)
+#8 D:\laragon\www\PRAK701\system\CodeIgniter.php(933): App\Controllers\Book->store()
+#9 D:\laragon\www\PRAK701\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+#10 D:\laragon\www\PRAK701\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\PRAK701\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\PRAK701\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\laragon\www\PRAK701\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\laragon\www\PRAK701\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2025-05-20 01:56:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: book/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (:judul:, :penulis:, :penerbit:, :tahun_terbit:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Book.php(74): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 01:56:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (\'Pengepungan Bukit Duri\', \'SHEILA\', \'SABINA\', \'2004\', \'2025-05-20 01:56:26\', \'2025-05-20 01:56:26\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (\'Pengepungan Bukit Duri\', \'SHEILA\', \'SABINA\', \'2004\', \'2025-05-20 01:56:26\', \'2025-05-20 01:56:26\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (:judul:, :penulis:, :penerbit:, :tahun_terbit:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Book.php(74): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 01:56:26 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (\'Pengepungan Bukit Duri\', \'SHEILA\', \'SABINA\', \'2004\', \'2025-05-20 01:56:26\', \'2025-05-20 01:56:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (\'Pengepungan Bukit Duri\', \'SHEILA\', \'SABINA\', \'2004\', \'2025-05-20 01:56:26\', \'2025-05-20 01:56:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (\'Pengepungan Bukit Duri\', \'SHEILA\', \'SABINA\', \'2004\', \'2025-05-20 01:56:26\', \'2025-05-20 01:56:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `book` (`judul`, `penulis`, `penerbit`, `tahun_terbit`, `created_at`, `updated_at`) VALUES (:judul:, :penulis:, :penerbit:, :tahun_terbit:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Book.php(74): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 02:08:15 --> ErrorException: Undefined variable $buku
+[Method: GET, Route: book/edit/1]
+in APPPATH\Views\book\Edit.php on line 2.
+ 1 APPPATH\Views\book\Edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $buku', 'D:\\laragon\\www\\PRAK701\\app\\Views\\book\\Edit.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\PRAK701\\app\\Views\\book\\Edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('book/edit', [], true)
+ 5 APPPATH\Controllers\Book.php(90): view('book/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+ERROR - 2025-05-20 13:30:55 --> mysqli_sql_exception: Table 'peminjaman.buku' doesn't exist in D:\laragon\www\PRAK701\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\laragon\www\PRAK701\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\laragon\www\PRAK701\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\laragon\www\PRAK701\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\laragon\www\PRAK701\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\laragon\www\PRAK701\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\PRAK701\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Atomic Habits', 'buku.judul', Array)
+#6 D:\laragon\www\PRAK701\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('Atomic Habits', 'buku.judul', Array, NULL, 'judul')
+#7 D:\laragon\www\PRAK701\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('judul', 'judul', 'Atomic Habits', Array, Array, 'judul')
+#8 D:\laragon\www\PRAK701\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\laragon\www\PRAK701\app\Controllers\Book.php(61): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\laragon\www\PRAK701\system\CodeIgniter.php(933): App\Controllers\Book->store()
+#11 D:\laragon\www\PRAK701\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+#12 D:\laragon\www\PRAK701\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\laragon\www\PRAK701\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\laragon\www\PRAK701\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\laragon\www\PRAK701\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\laragon\www\PRAK701\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#17 {main}
+CRITICAL - 2025-05-20 13:30:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'peminjaman.buku' doesn't exist
+[Method: POST, Route: book/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `buku`
+WHERE `judul` = :judul:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Atomic Habits', 'buku.judul', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('Atomic Habits', 'buku.judul', [...], null, 'judul')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('judul', 'judul', 'Atomic Habits', [...], [...], 'judul')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Book.php(61): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 13:30:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'peminjaman.buku' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `buku`
+WHERE `judul` = \'Atomic Habits\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `buku`
+WHERE `judul` = \'Atomic Habits\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `buku`
+WHERE `judul` = :judul:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Atomic Habits', 'buku.judul', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('Atomic Habits', 'buku.judul', [...], null, 'judul')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('judul', 'judul', 'Atomic Habits', [...], [...], 'judul')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Book.php(61): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 13:30:55 --> [Caused by] mysqli_sql_exception: Table 'peminjaman.buku' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `buku`
+WHERE `judul` = \'Atomic Habits\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `buku`
+WHERE `judul` = \'Atomic Habits\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `buku`
+WHERE `judul` = \'Atomic Habits\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `buku`
+WHERE `judul` = :judul:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('Atomic Habits', 'buku.judul', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_unique('Atomic Habits', 'buku.judul', [...], null, 'judul')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('judul', 'judul', 'Atomic Habits', [...], [...], 'judul')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Book.php(61): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Book->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Book))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 15:15:21 --> Error: Call to undefined function set_value()
+[Method: GET, Route: /]
+in APPPATH\Views\auth\Login.php on line 140.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('auth/login', [], true)
+ 4 APPPATH\Controllers\Auth.php(10): view('auth/login')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 15:18:33 --> Error: Call to undefined function set_value()
+[Method: GET, Route: login]
+in APPPATH\Views\auth\Login.php on line 140.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('auth/login', [], true)
+ 4 APPPATH\Controllers\Auth.php(10): view('auth/login')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
+CRITICAL - 2025-05-20 16:37:55 --> ParseError: syntax error, unexpected end of file, expecting "elseif" or "else" or "endif"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\Dashboard.php on line 135.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(11): view('dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\PRAK701\\public\\index.php')
